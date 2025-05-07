@@ -13,7 +13,13 @@ In this section, provide your interpretation of the Logistic Regression model's 
 - How much did the class imbalance affect the results?
 - What does the confusion matrix tell you about the model's predictions?
 
-*Your analysis here...*
+The accuracy metric performed the best with a value of 91.95%. It is probably high because of the clas imbalance meaning the model is likely predicting the majority class correctly most of the time.  
+
+The recall metric performed the worst with a value of 32.39%. The low recall means that the model is failing to capture many of the positive cases, likley due to class imabalance. 
+
+The imbalance impact score is 1 which means that there is a severe effect of class imbalance on the results. With the high accuracy and low recall this means that the model is predicting the majority class correctly but is struggling predicting the minority class. 
+
+The confusion matrix tells us the true positives, true negatives, false positives, and false negatives. So with the low recall we tend to see a high value of false negatives. 
 
 ## Part 2: Tree-Based Models with Time Series Features
 
