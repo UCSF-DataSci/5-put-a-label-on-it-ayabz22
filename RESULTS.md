@@ -31,7 +31,11 @@ In this section, compare the performance of the Random Forest and XGBoost models
 - Why might one model outperform the other on this dataset?
 - How did the addition of time-series features (rolling mean and standard deviation) affect model performance?
 
-*Your analysis here...*
+Based off the AUC score the random forest is 0.7808 and the XGBoost is 0.7686. So the random forest did better than the XGBoost model. 
+
+Random first might outperform the other model because of overfitting. Random forests usually has a lot of trees which can lead to overfitting. Random forest also can capture non linear relationships between features which can also contribute to the outperformance. 
+
+Adding time series features improved the model because it allowed them to account for temporal depdencies and also catches patterns that we didn't see before. Random forests might have benefitted more from these features due to the fact that this model can capture complex interactions. 
 
 ## Part 3: Logistic Regression with Balanced Data
 
@@ -44,7 +48,7 @@ In this section, analyze the improvements gained by addressing class imbalance:
 - Why might some metrics improve more than others?
 - What does this tell you about the importance of addressing class imbalance?
 
-*Your analysis here...*
+The recall and AUC improved by a lot while precision didn't improve that much. When some metrics improve while others don't it usually because of an imbalance. There is also tradeoffs meaning you can get one metric good but have to sacrafice for the other. This is why its important to address imbalance because you don't want a model that ignores the minority class because it will lead to poor recall. Balancing the model will imporve some of the metrics such as the recall and AUC. 
 
 ## Overall Conclusions
 
@@ -54,4 +58,8 @@ Summarize your key findings from all three parts of the assignment:
 - Which techniques provided the most significant improvements?
 - What would you recommend for future modeling of this dataset?
 
-*Your conclusions here...*
+The most important factors is the actual model. Choosing the model with the highest AUC and better values in metrics is better. Feature engineering is als important because when you include these features it improved the model as we saw in the random forest. Fixing the imabalance was also very helpful because we got precision and recall to not be so highly skewed. 
+
+The ones that gave us the best results was balancing the dataset as we saw a huge imporvement. AUC increased by 3.51% and F1 score improved by 22.15% and recall improved by 156.56%. 
+
+For future models I will for sure be using time-series feature engineering because of how effective it is. Also making sure I check the data if its skewed or not so I can see if I have to balance the data. I will also make sure to monitor the trade offs especially in high stakes applications. 
